@@ -1,3 +1,3 @@
-define(["lib/knockout"], function (ko) {
-    console.log(ko);
+define(["lib/knockout", "components/app-shell"], function (ko, _appShell) {
+    ko.applyBindings({});
 });
