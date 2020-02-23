@@ -1,0 +1,22 @@
+{
+  "name": "require-inner",
+  "version": "1.0.0",
+  "description": "Transforms some stuff inside existing RequireJS setups",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sebug/require-inner.git"
+  },
+  "author": "Sebastian Gfeller",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/sebug/require-inner/issues"
+  },
+  "homepage": "https://github.com/sebug/require-inner#readme",
+  "dependencies": {
+    "requirejs": "^2.3.6"
+  }
+}
