@@ -5,8 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-      "install-prerequisites": "mkdir -p lib && cp node_modules/requirejs/require.js lib/require.js && cp node_modules/knockout/build/output/knockout-latest.js lib/knockout.js",
-      "babel": "babel src --out-dir build && cp src/index.html build/index.html"
+    "install-prerequisites": "mkdir -p lib && cp node_modules/requirejs/require.js lib/require.js && cp node_modules/knockout/build/output/knockout-latest.js lib/knockout.js",
+    "babel": "babel src --out-dir build && cp src/index.html build/index.html"
   },
   "repository": {
     "type": "git",
@@ -20,6 +20,7 @@
   "homepage": "https://github.com/sebug/require-inner#readme",
   "dependencies": {
     "@babel/polyfill": "^7.8.3",
+    "core-js": "^3.6.4",
     "knockout": "^3.5.1",
     "requirejs": "^2.3.6"
   },
