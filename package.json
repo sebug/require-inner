@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "install-prerequisites": "mkdir -p lib && cp node_modules/requirejs/require.js lib/require.js && cp node_modules/knockout/build/output/knockout-latest.js lib/knockout.js",
+    "install-prerequisites": "mkdir -p lib && cp node_modules/requirejs/require.js lib/require.js && cp node_modules/knockout/build/output/knockout-latest.js lib/knockout.js && cp node_modules/regenerator-runtime/runtime.js lib/regenerator-runtime.js && cp node_modules/core-js-bundle/minified.js lib/core-js.js && cp node_modules/core-js-bundle/minified.js.map lib/minified.js.map",
     "babel": "babel src --out-dir build && cp src/index.html build/index.html"
   },
   "repository": {
@@ -21,6 +21,7 @@
   "dependencies": {
     "@babel/polyfill": "^7.8.3",
     "core-js": "^3.6.4",
+    "core-js-bundle": "^3.6.4",
     "knockout": "^3.5.1",
     "regenerator-runtime": "^0.13.3",
     "requirejs": "^2.3.6"

@@ -8,6 +8,8 @@
     <app-shell></app-shell>
 
     <script src="../lib/knockout.js"></script>
+    <script src="../lib/regenerator-runtime.js"></script>
+    <script src="../lib/core-js.js"></script>
     <script data-main="main" src="../lib/require.js"></script>
     <script>
       requirejs.config({
@@ -16,6 +18,16 @@
       lib: '../lib',
       components: './components'
       }
+      });
+      define('regenerator-runtime/runtime', [], runtime);
+      define('core-js/modules/es6.promise', [], function () {
+      return Promise;
+      });
+      define('core-js/modules/es6.object.to-string', [], function () {
+      return Object.toString;
+      });
+      require(['regenerator-runtime/runtime', 'core-js/modules/es6.promise', 'core-js/modules/es6.object.to-string'], function () {
+      console.log('loaded prerequisites');
       });
     </script>
   </body>
