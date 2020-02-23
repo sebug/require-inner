@@ -1,12 +1,19 @@
 define(["lib/knockout"], function (ko) {
 
-    async function someFun() {
-	const res = await Promise.resolve(43);
+    function getMessage() {
+	return Promise.resolve('Hello from async');
     }
     
     class ShellViewModel {
 	constructor() {
 	    this.message = ko.observable('Hello from Knockout component');
+	    this.init = this.init.bind(this);
+	    setTimeout(this.init);
+	}
+
+	async init() {
+	    const msg = await getMessage();
+	    this.message(msg);
 	}
     }
 

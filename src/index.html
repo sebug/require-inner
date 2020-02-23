@@ -23,10 +23,16 @@
       define('core-js/modules/es6.promise', [], function () {
       return Promise;
       });
+      define('core-js/modules/es.promise', [], function () {
+      return Promise;
+      });
       define('core-js/modules/es6.object.to-string', [], function () {
       return Object.toString;
       });
-      require(['regenerator-runtime/runtime', 'core-js/modules/es6.promise', 'core-js/modules/es6.object.to-string'], function () {
+      define('core-js/modules/es.object.to-string', [], function () {
+      return Object.toString;
+      });
+      require(['regenerator-runtime/runtime', 'core-js/modules/es6.promise', 'core-js/modules/es6.object.to-string', 'core-js/modules/es.object.to-string', 'core-js/modules/es.promise'], function () {
       console.log('loaded prerequisites');
       });
     </script>
