@@ -4,7 +4,8 @@
   "description": "Transforms some stuff inside existing RequireJS setups",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "install-prerequisites": "mkdir -p lib && cp node_modules/requirejs/require.js lib/require.js && cp node_modules/knockout/build/output/knockout-latest.js lib/knockout.js"
   },
   "repository": {
     "type": "git",
@@ -17,6 +18,7 @@
   },
   "homepage": "https://github.com/sebug/require-inner#readme",
   "dependencies": {
+    "knockout": "^3.5.1",
     "requirejs": "^2.3.6"
   }
 }
